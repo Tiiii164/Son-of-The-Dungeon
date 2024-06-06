@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: 4741e8eaa5f3c644582302b229d66017
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0419cc725b8dfd74f81300dffddc9ebd
+      internalID: 1498878137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abd709b7a955b0449bcd757f29b0220
+      internalID: 1953762468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f0d8c3be8f82747adebad6907c70d7
+      internalID: 1401191708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752a4766ffc64cf43933a8a010057a2c
+      internalID: -45555158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88876116fc4de34cbf7a06a4fb77f2a
+      internalID: -209029582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c55e9583aa07a2468557a70671e1b75
+      internalID: 23786362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013d18e3150461c4485d6116578092dd
+      internalID: -1522265600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_7
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 66
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8689f9cbe09bf294d864495e51639bb6
+      internalID: 1978675378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bcb9f8695ca5a4988d13980783a35e
+      internalID: -1924720475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28bb0366a2245f4a98392068520e992
+      internalID: 1616558842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba4aa5d95894134cb4ad2f69854f514
+      internalID: 396305239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5776417e9e9288942ace7d9098a994f4
+      internalID: 1807814363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b90a7d877baadb4ba7c63703fc05384
+      internalID: -293578557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ad5e53d4037a4478513022fa8d2c32
+      internalID: 1266932518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c47ad0c3228fd84eb08da37fece6bd5
+      internalID: -97675697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_15
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 44
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deb989baa121d44d9772bc9ea1fbda3
+      internalID: 1013759380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce89a762445bba3468b09892c10a0bf5
+      internalID: 452470362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3670c8c6330311743ade5e1f0f026808
+      internalID: -1056841813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bd268665302bb489b2a10275f300c1
+      internalID: -929228565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_19
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fda26361503c6d46b2f9f5f9ce87941
+      internalID: -817958429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34184bfe234794a4eb02622d0373e89a
+      internalID: 538436499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d919d2a285aeb264ebafd5ae1b2f8a47
+      internalID: -874232762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_22
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1527814ca2cd8014babc940105e8be15
+      internalID: 1037410224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 22
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4049cb6daa46f4c984d67fc0a653db
+      internalID: 1186254925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e21e2395b6e250459d10fe17a23cb0b
+      internalID: -1223755437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_25
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5316d9947c0964cbe44bb51bf32ebb
+      internalID: -1710014346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1716a4b68bb2f0a43a4aa7458b513882
+      internalID: -316710206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_27
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c4ca2c3f25e5440b72133e2d8edc9d
+      internalID: 1826194309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01207974f470a05479afb9907e9ca976
+      internalID: 108558035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_29
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd02128401a89e45ac374ff6eaf3dc2
+      internalID: -1096601681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5e093e6db3bf147801693709f5fc9f
+      internalID: -408506641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Knight death Sprite-sheet 20x22_31
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1775a7c3b60494e4a87eaaec328f33ab
+      internalID: 2122645735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue Knight death Sprite-sheet 20x22_0: 1498878137
+      Blue Knight death Sprite-sheet 20x22_1: 1953762468
+      Blue Knight death Sprite-sheet 20x22_10: 396305239
+      Blue Knight death Sprite-sheet 20x22_11: 1807814363
+      Blue Knight death Sprite-sheet 20x22_12: -293578557
+      Blue Knight death Sprite-sheet 20x22_13: 1266932518
+      Blue Knight death Sprite-sheet 20x22_14: -97675697
+      Blue Knight death Sprite-sheet 20x22_15: 1013759380
+      Blue Knight death Sprite-sheet 20x22_16: 452470362
+      Blue Knight death Sprite-sheet 20x22_17: -1056841813
+      Blue Knight death Sprite-sheet 20x22_18: -929228565
+      Blue Knight death Sprite-sheet 20x22_19: -817958429
+      Blue Knight death Sprite-sheet 20x22_2: 1401191708
+      Blue Knight death Sprite-sheet 20x22_20: 538436499
+      Blue Knight death Sprite-sheet 20x22_21: -874232762
+      Blue Knight death Sprite-sheet 20x22_22: 1037410224
+      Blue Knight death Sprite-sheet 20x22_23: 1186254925
+      Blue Knight death Sprite-sheet 20x22_24: -1223755437
+      Blue Knight death Sprite-sheet 20x22_25: -1710014346
+      Blue Knight death Sprite-sheet 20x22_26: -316710206
+      Blue Knight death Sprite-sheet 20x22_27: 1826194309
+      Blue Knight death Sprite-sheet 20x22_28: 108558035
+      Blue Knight death Sprite-sheet 20x22_29: -1096601681
+      Blue Knight death Sprite-sheet 20x22_3: -45555158
+      Blue Knight death Sprite-sheet 20x22_30: -408506641
+      Blue Knight death Sprite-sheet 20x22_31: 2122645735
+      Blue Knight death Sprite-sheet 20x22_4: -209029582
+      Blue Knight death Sprite-sheet 20x22_5: 23786362
+      Blue Knight death Sprite-sheet 20x22_6: -1522265600
+      Blue Knight death Sprite-sheet 20x22_7: 1978675378
+      Blue Knight death Sprite-sheet 20x22_8: -1924720475
+      Blue Knight death Sprite-sheet 20x22_9: 1616558842
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
