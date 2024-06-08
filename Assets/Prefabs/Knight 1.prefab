@@ -91,7 +91,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574568180494708603}
-  - component: {fileID: 3755435187765751225}
   - component: {fileID: 3020168010297860732}
   - component: {fileID: 2046956564036230263}
   - component: {fileID: 3553493870608302349}
@@ -119,27 +118,6 @@ Transform:
   - {fileID: 8158289882394013719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3755435187765751225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4358886623563073155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 146d58d5178ef9b46b2a678f183e2148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
-  OnHitWithReference:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeathWithReference:
-    m_PersistentCalls:
-      m_Calls: []
-  isDead: 0
 --- !u!114 &3020168010297860732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,13 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1de760b180a5fc0499fd392b948db5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  dashBoost: 8
-  dashTime: 0.2
-  dashCooldownTime: 0.5
-  _ghostEffect: {fileID: 8946508642344815187, guid: ec49f9040038b7a48b0f01012d19bd04,
-    type: 3}
-  ghostDelayTime: 0.05
 --- !u!58 &2046956564036230263
 CircleCollider2D:
   m_ObjectHideFlags: 0
