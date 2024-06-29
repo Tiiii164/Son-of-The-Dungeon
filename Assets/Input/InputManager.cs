@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
     private InputAction _leftClickAction;
     private InputAction _pointerPositionAction;
     private InputAction _leftShiftAction;
-
+    private InputAction _rightClickAction;
     private PlayerInput _playerInput;
 
     private void Awake()
@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
         _leftClickAction = _playerInput.actions["Attack"];
         _pointerPositionAction = _playerInput.actions["PointerPosition"];
         _leftShiftAction = _playerInput.actions["Dash"];
+        _rightClickAction = _playerInput.actions["Dash"];
     }
     private void Update()
     {
@@ -35,5 +36,6 @@ public class InputManager : MonoBehaviour
         Attack = _leftClickAction.WasPressedThisFrame();
         //Attack = _leftClickAction.ReadValue<float>() > 0.5f;
         Dash = _leftShiftAction.WasPressedThisFrame();
+        Dash = _rightClickAction.WasPressedThisFrame();
     }
 }

@@ -3,7 +3,7 @@
 public class PlayerCollisionHandler : MonoBehaviour
 {
     private PlayerHealth playerHealth;
-
+    private Animator animator;
     private void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
@@ -20,15 +20,14 @@ public class PlayerCollisionHandler : MonoBehaviour
             {
                 // Trừ máu của player dựa trên lượng sát thương từ đạn
                 playerHealth.TakeDamage(enemyBullet.Damage);
-                // Xóa đạn sau khi va chạm
-                Destroy(collision.gameObject);
             }
         }
         //đụng phải enemy 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // Trừ máu của player khi va chạm với enemy
-            playerHealth.TakeDamage(2);
+            TouchDamage enemyTouchDamage = collision.gameObject.GetComponent<TouchDamage>();
+            playerHealth.TakeDamage(enemyTouchDamage.Damage);
         }
         ////dụng phải trap
         //if (collision.gameObject.CompareTag("Trap"))
@@ -36,5 +35,12 @@ public class PlayerCollisionHandler : MonoBehaviour
         //    // Trừ máu của player khi va chạm với bẫy
         //    playerHealth.TakeDamage(1);
         //}
+        IKnockBackable knockbackable = GetComponent<IKnockBackable>();
+        if (knockbackable != null)
+        {
+            Vector2 direction = (transform.position - collision.transform.position).normalized;
+            float force = 10f;
+            knockbackable.ApplyKnockBack(direction, force);
+        }
     }
 }

@@ -161,4 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559e2b1b22b6bdc41bcdf2d2aaedf416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 5
+  damage: 5
+  knockBackForce: 5

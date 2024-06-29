@@ -4,8 +4,15 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour, IDamageable
 {
     public float maxHealth = 10;
-    [SerializeField] float currentHealth = 10;
+    public float currentHealth = 10;
 
+    public Animator animator;
+    
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     protected virtual void Start()
     {
         currentHealth = maxHealth;
@@ -24,6 +31,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     protected virtual void Die()
     {
         Debug.Log(gameObject.name + " has died!");
+        
     }
 
     

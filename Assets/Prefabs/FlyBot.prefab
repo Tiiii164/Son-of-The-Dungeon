@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 8648949563245004163}
   - component: {fileID: 8909999859330778557}
   - component: {fileID: 8474014881222098318}
-  - component: {fileID: 7969348008501846857}
   - component: {fileID: 7702538592007621461}
   m_Layer: 0
   m_Name: FlyBot
@@ -330,41 +329,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7969348008501846857
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6758160564003387590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0.13}
-  serializedVersion: 2
-  m_Radius: 0.3
 --- !u!114 &7702538592007621461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600a2cc9fb4d83545af2a2121c14d311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 100
   EnemyIdleBase: {fileID: 0}
   EnemyChaseBase: {fileID: 0}
   EnemyAttackBase: {fileID: 0}

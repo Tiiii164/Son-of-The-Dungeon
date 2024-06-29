@@ -5,8 +5,6 @@ using UnityEngine.Rendering.VirtualTexturing;
 
 public class Enemy : MonoBehaviour, /*IDamageable,*/ IEnemyMoveable, ITriggerCheckable
 {
-    [field: SerializeField] public float MaxHealth { get; set; } = 100f;
-    [SerializeField] public float CurrentHealth { get; set; }
     public Rigidbody2D RB { get; set ; }
     public bool IsFacingRight { get ; set; } = true;
         
@@ -51,9 +49,6 @@ public class Enemy : MonoBehaviour, /*IDamageable,*/ IEnemyMoveable, ITriggerChe
 
     private void Start()
     {
-
-
-        CurrentHealth = MaxHealth;
         RB = GetComponent<Rigidbody2D>();
 
         EnemyIdleBaseInstance.Initialize(gameObject, this);

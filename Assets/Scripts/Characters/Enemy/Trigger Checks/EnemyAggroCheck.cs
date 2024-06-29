@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class EnemyAggroCheck : MonoBehaviour
 {
-    public GameObject PlayerTarger {  get;  set; }
+    public GameObject PlayerTarget {  get;  set; }
     private Enemy _enemy;
     private void Awake()
     {
-        PlayerTarger = GameObject.FindGameObjectWithTag("Player");
+        PlayerTarget = GameObject.FindGameObjectWithTag("Player");
         _enemy = GetComponentInParent<Enemy>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject == PlayerTarger)
+        if(collision.gameObject == PlayerTarget)
         {
             _enemy.SetAggroStatus(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == PlayerTarger)
+        if (collision.gameObject == PlayerTarget)
         {
             _enemy.SetAggroStatus(false);
         }

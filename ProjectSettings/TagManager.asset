@@ -8,6 +8,7 @@ TagManager:
   - PlayerBullet
   - PlayerMelee
   - Enemy
+  - TriggerArea
   layers:
   - Default
   - TransparentFX
