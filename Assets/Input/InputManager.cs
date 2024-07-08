@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     public static Vector2 PointerPosition;
     public static bool Attack;
     public static bool Dash;
-
+    public static InputManager instance;
     private InputAction _moveAction;
     private InputAction _leftClickAction;
     private InputAction _pointerPositionAction;
@@ -19,6 +19,15 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         //gọi ra để ref tới thằng input actions
         _playerInput = GetComponent<PlayerInput>();
 
@@ -37,5 +46,15 @@ public class InputManager : MonoBehaviour
         //Attack = _leftClickAction.ReadValue<float>() > 0.5f;
         Dash = _leftShiftAction.WasPressedThisFrame();
         Dash = _rightClickAction.WasPressedThisFrame();
+    }
+    public void DisableDashAction()
+    {
+        _leftShiftAction.Disable();
+        _rightClickAction.Disable();
+    }
+    public void EnableDashAction()
+    {
+        _leftShiftAction.Enable();
+        _rightClickAction.Enable();
     }
 }

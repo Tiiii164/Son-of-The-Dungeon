@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : HealthSystem
 {
-
-    //private Rigidbody2D rigidbody;
+    [SerializeField] private AudioClip[] damageSoundClips;
+    
     private DamageFlash _damageFlash;
     private void Awake()
     {
@@ -16,9 +16,12 @@ public class EnemyHealth : HealthSystem
     }
     public override void TakeDamage(float amount)
     {
+        //chạy animation ăn dame, đẩy lùi chớp chớp các kiểu
+
         _damageFlash.CallDamageFlash();
         base.TakeDamage(amount);
-        //chạy animation ăn dame, đẩy lùi chớp chớp các kiểu
+        //âm thanh đao đớn 
+        SoundFXManager.Instance.PlayRandomSoundFXClip(damageSoundClips, transform ,1f); 
     }
 
     protected override void Die()

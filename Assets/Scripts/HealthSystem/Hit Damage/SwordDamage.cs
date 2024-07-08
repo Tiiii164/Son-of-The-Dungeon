@@ -38,6 +38,10 @@ public class SwordDamage : MonoBehaviour, IDamage,IKnockBackable
                 StartCoroutine(ResetKnockBack());
             }
         }
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
     private IEnumerator ResetKnockBack()
     {

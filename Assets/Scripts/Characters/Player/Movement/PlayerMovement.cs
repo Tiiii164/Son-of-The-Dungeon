@@ -12,6 +12,7 @@ namespace Player.Movement
         [SerializeField] private float dashCooldownTime;
         [SerializeField] private GameObject _ghostEffect;
         [SerializeField] float ghostDelayTime;
+        [SerializeField] AudioClip dashSound;
         private Coroutine dashEffectCoroutine;
 
         private float currentDashTime;
@@ -61,6 +62,7 @@ namespace Player.Movement
                 StartDashEffect();
                 // Đặt lại thời gian hồi chiêu
                 currentDashCooldownTime = dashCooldownTime;
+                SoundFXManager.Instance.PlaySoundFXClip(dashSound, transform, 1f);
             }
 
             // Xử lý việc kết thúc dash
