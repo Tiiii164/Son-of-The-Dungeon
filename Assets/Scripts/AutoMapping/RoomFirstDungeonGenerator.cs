@@ -2,25 +2,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
-    [SerializeField]
-    private int minRoomWidth = 4, minRoomHeight = 4;
-    [SerializeField]
-    private int dungeonWidth = 20, dungeonHeight = 20;
-    [SerializeField]
-    [Range(0,10)]
-    private int offset = 1;
-    [SerializeField]
-    private bool randomWalkRooms = false;
+    [SerializeField] private int minRoomWidth = 4, minRoomHeight = 4;
+    [SerializeField] private int dungeonWidth = 20, dungeonHeight = 20;
+    [SerializeField] [Range(0,10)]private int offset = 1;
+    [SerializeField] private bool randomWalkRooms = false;
 
+    [SerializeField] private GameObject[] monsters; // Tham chiếu đến các prefab quái vật
+    [SerializeField] private GameObject[] props; // Tham chiếu đến các prefab props
+    [SerializeField] private GameObject[] portals;
+    [SerializeField] private int numberOfMonsters ; // Số lượng quái vật cần spawn
+    [SerializeField] private int numberOfProps ; // Số lượng props cần spawn
+    [SerializeField] private int numberOfPortals;
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
     }
-
+    
+ 
     private void CreateRooms()
     {
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
@@ -41,6 +45,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         foreach (var room in roomsList)
         {
             roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
+            
         }
 
         HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
@@ -48,7 +53,34 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
         tilemapVisualizer.PaintFloorTiles(floor);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
+        SpawnMonstersAndProps(floor); // Gọi hàm spawn quái vật và props
     }
+
+    private void SpawnMonstersAndProps(HashSet<Vector2Int> floorPositions)
+    {
+        List<Vector2Int> floorList = new List<Vector2Int>(floorPositions);
+
+        for (int i = 0; i < numberOfMonsters; i++)
+        {
+            Vector2Int randomPosition = floorList[Random.Range(0, floorList.Count)];
+            Vector3 spawnPosition = new Vector3(randomPosition.x, randomPosition.y, 0);
+            Instantiate(monsters[Random.Range(0, monsters.Length)], spawnPosition, Quaternion.identity);
+        }
+
+        for (int i = 0; i < numberOfProps; i++)
+        {
+            Vector2Int randomPosition = floorList[Random.Range(0, floorList.Count)];
+            Vector3 spawnPosition = new Vector3(randomPosition.x, randomPosition.y, 0);
+            Instantiate(props[Random.Range(0, props.Length)], spawnPosition, Quaternion.identity);
+        }
+        for (int i = 0; i < portals.Length; i++)
+        {
+                Vector2Int randomPosition = floorList[Random.Range(0, floorList.Count)];
+                Vector3 spawnPosition = new Vector3(randomPosition.x, randomPosition.y, 0);
+                Instantiate(portals[i], spawnPosition, Quaternion.identity);
+        }
+    }
+    
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {

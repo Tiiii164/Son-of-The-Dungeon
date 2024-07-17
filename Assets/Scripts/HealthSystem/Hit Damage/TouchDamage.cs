@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TouchDamage : MonoBehaviour, IDamage, IKnockBackable
 {
-    public float Damage { get; set; }
-    public float damage;
+    public int Damage { get; set; }
+    public int damage;
     public float KnockBackForce { get; set; }
     public float knockBackForce = 5f;
 

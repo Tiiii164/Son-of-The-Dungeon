@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccd9f0a87d7fbc46b88c60936e5b82f, type: 3}
   m_Name: CasualDungeons
   m_EditorClassIdentifier: 
-  iterations: 9
+  iterations: 23
   walkLength: 22
   startRandomlyEachIteration: 1

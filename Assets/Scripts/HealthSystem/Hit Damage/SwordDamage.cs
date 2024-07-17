@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordDamage : MonoBehaviour, IDamage,IKnockBackable
+public class SwordDamage : MonoBehaviour,IKnockBackable
 {
 
-    public float Damage { get; set ; }
-    public float damage;
+    private PlayerHealth playerHealth;
     public float KnockBackForce { get; set ;}
     public float knockBackForce;
     private bool canKnockBack = true;
+
+    private void Awake()
+    {
+        playerHealth = GetComponentInParent<PlayerHealth>();
+    }
     private void Start()
     {
-        Damage = damage;
         KnockBackForce = knockBackForce;
 
     }
@@ -27,7 +30,7 @@ public class SwordDamage : MonoBehaviour, IDamage,IKnockBackable
         {
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
             KnockBack enemyKnockBack = collision.gameObject.GetComponent<KnockBack>();
-            enemyHealth.TakeDamage(Damage);
+            enemyHealth.TakeDamage(playerHealth.GetDamage());
             if ( canKnockBack)
             {
                 // Trừ máu của enemy dựa trên lượng sát thương từ kiếm

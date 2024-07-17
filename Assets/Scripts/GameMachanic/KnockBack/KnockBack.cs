@@ -15,7 +15,6 @@ public class KnockBack : MonoBehaviour
     {
         if (_rigidbody2D != null)
         {
-            Debug.Log("yes");
             _rigidbody2D.AddForce(direction.normalized * force, ForceMode2D.Impulse);
         }
     }

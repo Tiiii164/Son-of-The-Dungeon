@@ -6,11 +6,18 @@ using UnityEngine;
 
 public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
-    [SerializeField]
-    private int corridorLength = 14, corridorCount = 5;
-    [SerializeField]
-    [Range(0.1f,1)]
-    private float roomPercent = 0.8f;
+    [SerializeField] private int corridorLength = 14, corridorCount = 5;
+    [SerializeField] [Range(0.1f,1)] private float roomPercent = 0.8f;
+
+    //PCG Data
+    private Dictionary<Vector2Int, HashSet<Vector2Int>> roomsDictionary = new Dictionary<Vector2Int, HashSet<Vector2Int>>();
+
+    private HashSet<Vector2Int> floorPositions, corridorPositions;
+
+    //Gizmos Data
+    private List<Color> roomColors = new List<Color>();
+
+    //[SerializeField] private bool showRoomGizmo = false, showCorridorsGizmo;
 
     protected override void RunProceduralGeneration()
     {
@@ -73,10 +80,12 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         int roomToCreateCount = Mathf.RoundToInt(potentialRoomPositions.Count * roomPercent);
 
         List<Vector2Int> roomsToCreate = potentialRoomPositions.OrderBy(x => Guid.NewGuid()).Take(roomToCreateCount).ToList();
-
+        ClearRoomData();
         foreach (var roomPosition in roomsToCreate)
         {
             var roomFloor = RunRandomWalk(randomWalkParameters, roomPosition);
+
+            SaveRoomData(roomPosition, roomFloor);
             roomPositions.UnionWith(roomFloor);
         }
         return roomPositions;
@@ -94,5 +103,18 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             potentialRoomPositions.Add(currentPosition);
             floorPositions.UnionWith(corridor);
         }
+        corridorPositions = new HashSet<Vector2Int>(floorPositions);
+    }
+
+    private void SaveRoomData(Vector2Int roomPosition,HashSet<Vector2Int> roomFloor)
+    {
+        roomsDictionary[roomPosition] = roomFloor;
+        roomColors.Add(UnityEngine.Random.ColorHSV());
+    }
+    private void ClearRoomData()
+    {
+        roomsDictionary.Clear();
+        roomColors.Clear(); 
     }
 }
+

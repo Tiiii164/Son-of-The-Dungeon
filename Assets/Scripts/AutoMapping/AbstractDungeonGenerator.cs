@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public abstract class AbstractDungeonGenerator : MonoBehaviour
 {
+   
+   
     [SerializeField]
     protected TilemapVisualizer tilemapVisualizer = null;
     [SerializeField]
@@ -12,8 +16,10 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
 
     public void GenerateDungeon()
     {
+
         tilemapVisualizer.Clear();
         RunProceduralGeneration();
+        
     }
 
     protected abstract void RunProceduralGeneration();

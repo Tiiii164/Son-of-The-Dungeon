@@ -9,20 +9,21 @@ public class InputManager : MonoBehaviour
     public static Vector2 PointerPosition;
     public static bool Attack;
     public static bool Dash;
+    public static bool Interact;
     public static InputManager instance;
     private InputAction _moveAction;
     private InputAction _leftClickAction;
     private InputAction _pointerPositionAction;
     private InputAction _leftShiftAction;
     private InputAction _rightClickAction;
+    private InputAction _interactAction;
     private PlayerInput _playerInput;
 
     private void Awake()
     {
         if (instance == null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            instance = this; 
         }
         else
         {
@@ -36,6 +37,7 @@ public class InputManager : MonoBehaviour
         _pointerPositionAction = _playerInput.actions["PointerPosition"];
         _leftShiftAction = _playerInput.actions["Dash"];
         _rightClickAction = _playerInput.actions["Dash"];
+        _interactAction = _playerInput.actions["Interact"];
     }
     private void Update()
     {
@@ -46,6 +48,9 @@ public class InputManager : MonoBehaviour
         //Attack = _leftClickAction.ReadValue<float>() > 0.5f;
         Dash = _leftShiftAction.WasPressedThisFrame();
         Dash = _rightClickAction.WasPressedThisFrame();
+
+        Interact = _interactAction.WasPressedThisFrame();
+        
     }
     public void DisableDashAction()
     {

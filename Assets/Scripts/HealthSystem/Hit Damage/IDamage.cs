@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IDamage
 {
-    float Damage {get; set;}
+    int Damage {get; set;}
    
 }

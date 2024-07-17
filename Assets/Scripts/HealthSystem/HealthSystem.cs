@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour, IDamageable
 {
-    public float maxHealth = 10;
-    public float currentHealth = 10;
+    public int maxHealth = 10;
+    public int currentHealth = 10;
 
     public Animator animator;
     
@@ -18,7 +18,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         currentHealth = maxHealth;
     }
 
-    public virtual void TakeDamage(float amount)
+    public virtual void TakeDamage(int amount)
     {
         currentHealth -= amount;
         Debug.Log(gameObject.name +" has " + currentHealth.ToString() + " HP");

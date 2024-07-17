@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 1380803815182130341}
   - component: {fileID: 4296490625810337056}
   - component: {fileID: 216420135554784838}
+  - component: {fileID: -1110017496809644919}
   m_Layer: 0
   m_Name: FlyBot
   m_TagString: Enemy
@@ -201,11 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c6482bf90f21fe4d9eb51c4453228bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 10
   currentHealth: 10
   animator: {fileID: 0}
   damageSoundClips:
   - {fileID: 8300000, guid: dc7dd34c9371fc34da334b4b064ef845, type: 3}
+  _experienceManager: {fileID: 1058106557922743476, guid: 011d7c6de2301ca4aa5d9fe1dfb7ac56,
+    type: 3}
 --- !u!114 &7280717831636577911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +284,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 0.3764706, g: 13.766361, b: 6.9804416, a: 1}
   _flashTime: 0.25
+--- !u!114 &-1110017496809644919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230335351154913381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77325865d5b53374da2f523f91a70cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialPosition: {x: 0, y: 1}
+  _messagePrefab: {fileID: 1802283374580098696, guid: e6ae2ccdbcf026f45bc1958106d9b89f,
+    type: 3}
 --- !u!1 &7238401533478025438
 GameObject:
   m_ObjectHideFlags: 0
