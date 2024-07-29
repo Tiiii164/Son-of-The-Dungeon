@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
@@ -11,36 +10,54 @@ public class PlayerHealth : HealthSystem
     [SerializeField] private int damage = 1;
     [SerializeField] private int healthPerLevel = 2;
     [SerializeField] private int damagePerLevel = 1;
+    private HealthBarManager _healthBarManager;
+    private Transform respawnTransform;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
         _damageFlash = GetComponent<DamageFlash>();
         _impulseSource = GetComponent<CinemachineImpulseSource>();
+        _healthBarManager = FindObjectOfType<HealthBarManager>();
     }
 
     public override void TakeDamage(int amount)
     {
-        //chạy animation ăn dame, đẩy lùi chớp chớp, run màn hình các kiểu
         CameraShakeManager.instance.CameraShake(_impulseSource);
         _damageFlash.CallDamageFlash();
         base.TakeDamage(amount);
+        _healthBarManager.UpdateHealthBar();
     }
 
     protected override void Die()
     {
         base.Die();
-        //animation chết ngắt
         animator.SetTrigger("Died");
-        Destroy(gameObject, 1.1f);
-        //rigidbody.velocity = Vector3.zero;
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(2); // Thời gian chờ trước khi chuyển scene
+        SceneController.instance.LoadScene("Lobby");
+        yield return new WaitForSeconds(0.1f); // Thời gian chờ để đảm bảo scene được tải hoàn tất
+
+        Transform respawnPoint = SceneController.instance.respawnPoint;
+        if (respawnPoint != null)
+        {
+            transform.position = respawnPoint.position;
+            transform.rotation = respawnPoint.rotation;
+        }
+
+        currentHealth = maxHealth; // Hồi đầy máu
+        _healthBarManager.UpdateHealthBar();
     }
 
     public void LevelUp()
     {
         maxHealth += healthPerLevel;
         damage += damagePerLevel;
-        currentHealth = maxHealth; // Hồi máu đầy khi lên cấp
+        currentHealth = maxHealth;
         Debug.Log("Level Up! New Max Health: " + maxHealth + ", New Damage: " + damage);
     }
 

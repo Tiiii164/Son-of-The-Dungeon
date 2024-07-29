@@ -18,10 +18,11 @@ public class ExperienceManager : MonoBehaviour
     [SerializeField] Image experienceFill;
 
     private PlayerHealth playerHealth;
-
+    private HealthBarManager healthBarManager;
     void Awake()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
+        healthBarManager = FindObjectOfType<HealthBarManager>();
         UpdateLevel();
     }
 
@@ -44,6 +45,7 @@ public class ExperienceManager : MonoBehaviour
             currentLevel++;
             UpdateLevel();
             playerHealth.LevelUp(); // Gọi phương thức LevelUp để tăng sát thương và máu
+            healthBarManager.UpdateHealthBar();
         }
     }
 
