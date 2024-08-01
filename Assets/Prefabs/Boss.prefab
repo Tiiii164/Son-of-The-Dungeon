@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 2937563706059456298}
   - component: {fileID: 945753616732838501}
   - component: {fileID: 6358471187197546073}
-  - component: {fileID: 6446197073491796652}
   - component: {fileID: 842628090200137569}
   - component: {fileID: 7553204968463773970}
   - component: {fileID: 8297668562593245834}
@@ -236,22 +235,6 @@ MonoBehaviour:
   EnemyIdleBase: {fileID: 11400000, guid: ef955717c1ab76640bb315bbedaa2e1e, type: 2}
   EnemyChaseBase: {fileID: 11400000, guid: 07f00ffde78b0c74eab5726e0a036af1, type: 2}
   EnemyAttackBase: {fileID: 11400000, guid: 848374089ba3719479546eed9ddb0111, type: 2}
---- !u!114 &6446197073491796652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3916100113590875710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c6482bf90f21fe4d9eb51c4453228bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
-  animator: {fileID: 0}
-  damageSoundClips: []
 --- !u!70 &842628090200137569
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

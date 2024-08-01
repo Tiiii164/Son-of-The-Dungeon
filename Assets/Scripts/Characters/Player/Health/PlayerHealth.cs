@@ -40,6 +40,7 @@ public class PlayerHealth : HealthSystem
     {
         yield return new WaitForSeconds(2); // Thời gian chờ trước khi chuyển scene
         SceneController.instance.LoadScene("Lobby");
+
         yield return new WaitForSeconds(0.1f); // Thời gian chờ để đảm bảo scene được tải hoàn tất
 
         Transform respawnPoint = SceneController.instance.respawnPoint;
@@ -49,7 +50,17 @@ public class PlayerHealth : HealthSystem
             transform.rotation = respawnPoint.rotation;
         }
 
+        ExperienceManager experienceManager = FindObjectOfType<ExperienceManager>();
+        if (experienceManager != null)
+        {
+            experienceManager.ResetExperience();
+        }
+
+        //maxHealth = initialMaxHealth;
+        //damage = initialDamageValue;
         currentHealth = maxHealth; // Hồi đầy máu
+        animator.ResetTrigger("Died");
+        animator.Rebind();
         _healthBarManager.UpdateHealthBar();
     }
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 
@@ -86,17 +86,17 @@ public class WeaponParent : MonoBehaviour
         Vector3 position = circleOrigin == null ? Vector3.zero : circleOrigin.position;
         Gizmos.DrawWireSphere(position, radius);
     }
-    public void DetectColliders()
-    {
-        //check coi quýnh trúng thì add logic
-        foreach (Collider2D collider in Physics2D.OverlapCircleAll(circleOrigin.position, radius))
-        {
-            Debug.Log(collider.name);
-            Health health;
-            if(health = collider.GetComponent<Health>())
-            {
-                health.GetHit(1, transform.parent.gameObject);
-            }
-        }
-    }
+    //public void DetectColliders()
+    //{
+    //    //check coi quýnh trúng thì add logic
+    //    foreach (Collider2D collider in Physics2D.OverlapCircleAll(circleOrigin.position, radius))
+    //    {
+    //        Debug.Log(collider.name);
+    //        Health health;
+    //        if(health = collider.GetComponent<Health>())
+    //        {
+    //            health.GetHit(1, transform.parent.gameObject);
+    //        }
+    //    }
+    //}
 }

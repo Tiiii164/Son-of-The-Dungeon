@@ -65,4 +65,10 @@ public class ExperienceManager : MonoBehaviour
         experienceText.text = start + " exp / " + end + " exp";
         experienceFill.fillAmount = (float)start / (float)end;
     }
+    public void ResetExperience()
+    {
+        currentLevel = 1;
+        totalExperience = 0;
+        UpdateLevel();
+    }
 }
