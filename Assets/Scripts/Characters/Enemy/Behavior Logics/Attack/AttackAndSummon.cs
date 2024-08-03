@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,21 +30,19 @@ public class AttackAndSummon : EnemyAttackSOBase
         _animator = gameObject.GetComponentInChildren<Animator>();
         _enemyHealth = gameObject.GetComponent<EnemyHealth>();
     }
-    public override void DoAnimationTriggerEventLogic(Enemy.AnimationTriggerType triggerType)
-    {
-        base.DoAnimationTriggerEventLogic(triggerType);
-    }
 
     public override void DoEnterLogic()
     {
         _timer = 0f;
         _exitTimer = 0f;
         _summonTimer = 0f;
+        _animator.SetBool("IsAttacking", false); // Đặt lại giá trị bool khi vào trạng thái
         base.DoEnterLogic();
     }
 
     public override void DoExitLogic()
     {
+        _animator.SetBool("IsAttacking", false); // Đặt lại giá trị bool khi ra khỏi trạng thái
         base.DoExitLogic();
     }
 
@@ -68,7 +65,6 @@ public class AttackAndSummon : EnemyAttackSOBase
         if (_enemyHealth.currentHealth < _enemyHealth.maxHealth * 0.5f && !isLowHealth)
         {
             isLowHealth = true;
-            
         }
 
         if (isLowHealth)
@@ -88,14 +84,16 @@ public class AttackAndSummon : EnemyAttackSOBase
             // Tấn công người chơi nếu chưa ở trạng thái máu thấp
             if (_timer > _timeBetweenTaunts)
             {
-                
-                //Invoke("SpawnBullets", 2f);
                 Vector2 moveVector = directionToPlayer * _tauntSpeed;
                 Debug.Log($"Move Vector: {moveVector}");
                 enemy.MoveEnemy(moveVector);
-                Debug.Log("Gọi MoveEnemy");
-                _animator.SetTrigger("IsAttacking");
+
+                _animator.SetBool("IsAttacking", true);
                 _timer = 0f; // Reset lại timer
+            }
+            else
+            {
+                _animator.SetBool("IsAttacking", false);
             }
         }
 
@@ -115,6 +113,7 @@ public class AttackAndSummon : EnemyAttackSOBase
 
         _timer += Time.deltaTime;
     }
+
     void SpawnBullets()
     {
         float angleStep = 360f / bulletCount; // Góc giữa mỗi viên đạn
@@ -137,13 +136,11 @@ public class AttackAndSummon : EnemyAttackSOBase
             angle += angleStep;
         }
     }
-    
+
     public override void DoPhysicsLogic()
     {
         base.DoPhysicsLogic();
     }
-
-    
 
     public override void ResetValues()
     {
